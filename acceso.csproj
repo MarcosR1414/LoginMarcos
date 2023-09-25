@@ -9,6 +9,78 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove=".github\**" />
+    <Compile Remove=".vs\**" />
+    <Compile Remove="acceso1\**" />
+    <EmbeddedResource Remove=".github\**" />
+    <EmbeddedResource Remove=".vs\**" />
+    <EmbeddedResource Remove="acceso1\**" />
+    <None Remove=".github\**" />
+    <None Remove=".vs\**" />
+    <None Remove="acceso1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\net6.0-windows\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net6.0-windows\acceso.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net6.0-windows\acceso.GlobalUsings.g.cs" />
+    <Compile Include="obj\Release\net6.0-windows\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\net6.0-windows\acceso.AssemblyInfo.cs" />
+    <Compile Include="obj\Release\net6.0-windows\acceso.GlobalUsings.g.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net6.0-windows\acceso.deps.json" />
+    <Content Include="bin\Debug\net6.0-windows\acceso.runtimeconfig.json" />
+    <Content Include="obj\acceso.csproj.nuget.dgspec.json" />
+    <Content Include="obj\Debug\net6.0-windows\acceso.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\net6.0-windows\acceso.designer.deps.json" />
+    <Content Include="obj\Debug\net6.0-windows\acceso.designer.runtimeconfig.json" />
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="acceso.sln" />
+    <None Include="bin\Debug\net6.0-windows\acceso.dll" />
+    <None Include="bin\Debug\net6.0-windows\acceso.exe" />
+    <None Include="bin\Debug\net6.0-windows\acceso.pdb" />
+    <None Include="bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll" />
+    <None Include="bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll" />
+    <None Include="bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll" />
+    <None Include="bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net6.0-windows\System.Data.SqlClient.dll" />
+    <None Include="obj\acceso.csproj.nuget.g.props" />
+    <None Include="obj\acceso.csproj.nuget.g.targets" />
+    <None Include="obj\Debug\net6.0-windows\acceso.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net6.0-windows\acceso.assets.cache" />
+    <None Include="obj\Debug\net6.0-windows\acceso.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net6.0-windows\acceso.csproj.BuildWithSkipAnalyzers" />
+    <None Include="obj\Debug\net6.0-windows\acceso.csproj.CopyComplete" />
+    <None Include="obj\Debug\net6.0-windows\acceso.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net6.0-windows\acceso.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\net6.0-windows\acceso.dll" />
+    <None Include="obj\Debug\net6.0-windows\acceso.Form1.resources" />
+    <None Include="obj\Debug\net6.0-windows\acceso.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net6.0-windows\acceso.genruntimeconfig.cache" />
+    <None Include="obj\Debug\net6.0-windows\acceso.pdb" />
+    <None Include="obj\Debug\net6.0-windows\acceso.Properties.Resources.resources" />
+    <None Include="obj\Debug\net6.0-windows\acceso.Registro.resources" />
+    <None Include="obj\Debug\net6.0-windows\apphost.exe" />
+    <None Include="obj\Debug\net6.0-windows\refint\acceso.dll" />
+    <None Include="obj\Debug\net6.0-windows\ref\acceso.dll" />
+    <None Include="obj\Debug\net6.0-windows\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\Release\net6.0-windows\acceso.AssemblyInfoInputs.cache" />
+    <None Include="obj\Release\net6.0-windows\acceso.assets.cache" />
+    <None Include="obj\Release\net6.0-windows\acceso.GeneratedMSBuildEditorConfig.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -21,6 +93,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Release\net6.0-windows\" />
+    <Folder Include="obj\Release\net6.0-windows\refint\" />
+    <Folder Include="obj\Release\net6.0-windows\ref\" />
   </ItemGroup>
 
 </Project>

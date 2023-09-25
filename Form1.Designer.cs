@@ -28,14 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             pictureBox1 = new PictureBox();
             User = new TextBox();
-            textBox1 = new TextBox();
+            Contraseña = new TextBox();
             checkBox1 = new CheckBox();
             button1 = new Button();
             button2 = new Button();
+            Text1 = new Label();
+            Text2 = new Label();
+            errorProvider1 = new ErrorProvider(components);
+            errorProvider2 = new ErrorProvider(components);
+            errorProvider3 = new ErrorProvider(components);
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider3).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -61,21 +71,19 @@
             User.Name = "User";
             User.Size = new Size(246, 35);
             User.TabIndex = 1;
-            User.Text = "Ingrese su usuario";
             User.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox1
+            // Contraseña
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.ForeColor = Color.Silver;
-            textBox1.Location = new Point(411, 322);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(246, 30);
-            textBox1.TabIndex = 2;
-            textBox1.Text = "Ingrese tu contraseña";
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            Contraseña.BorderStyle = BorderStyle.None;
+            Contraseña.ForeColor = Color.Silver;
+            Contraseña.Location = new Point(411, 322);
+            Contraseña.Margin = new Padding(3, 4, 3, 4);
+            Contraseña.Multiline = true;
+            Contraseña.Name = "Contraseña";
+            Contraseña.Size = new Size(246, 30);
+            Contraseña.TabIndex = 2;
+            Contraseña.TextAlign = HorizontalAlignment.Center;
             // 
             // checkBox1
             // 
@@ -101,6 +109,7 @@
             button1.TabIndex = 4;
             button1.Text = "Ingresar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -112,6 +121,49 @@
             button2.TabIndex = 5;
             button2.Text = "Registrarme";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // Text1
+            // 
+            Text1.AutoSize = true;
+            Text1.BackColor = Color.Transparent;
+            Text1.Location = new Point(327, 269);
+            Text1.Name = "Text1";
+            Text1.Size = new Size(56, 18);
+            Text1.TabIndex = 6;
+            Text1.Text = "Usuario";
+            // 
+            // Text2
+            // 
+            Text2.AutoSize = true;
+            Text2.Location = new Point(327, 322);
+            Text2.Name = "Text2";
+            Text2.Size = new Size(78, 18);
+            Text2.TabIndex = 7;
+            Text2.Text = "Contraseña";
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            errorProvider3.ContainerControl = this;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Transparent;
+            button3.Location = new Point(1043, 3);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 8;
+            button3.Text = "Cerrar";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // Form1
             // 
@@ -121,19 +173,26 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1119, 661);
+            Controls.Add(button3);
+            Controls.Add(Text2);
+            Controls.Add(Text1);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(checkBox1);
-            Controls.Add(textBox1);
+            Controls.Add(Contraseña);
             Controls.Add(User);
             Controls.Add(pictureBox1);
             Font = new Font("Calibri", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            ForeColor = Color.Black;
+            ForeColor = Color.Firebrick;
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -141,9 +200,15 @@
         #endregion
         private PictureBox pictureBox1;
         private TextBox User;
-        private TextBox textBox1;
+        private TextBox Contraseña;
         private CheckBox checkBox1;
         private Button button1;
         private Button button2;
+        private Label Text1;
+        private Label Text2;
+        private ErrorProvider errorProvider1;
+        private ErrorProvider errorProvider2;
+        private ErrorProvider errorProvider3;
+        private Button button3;
     }
 }
